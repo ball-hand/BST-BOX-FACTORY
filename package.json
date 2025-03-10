@@ -1,0 +1,34 @@
+{
+  "name": "bst-box-factory",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ball-hand/BST-BOX-FACTORY#readme",
+  "bugs": {
+    "url": "https://github.com/ball-hand/BST-BOX-FACTORY/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ball-hand/BST-BOX-FACTORY.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "npx electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "electron": "^35.0.1",
+    "sqlite3": "^5.1.7"
+  },
+  "build": {
+  "appId": "electronapps", 
+  "productName": "ElectronApp",
+  "win": {
+    "target": "nsis",
+    "icon": "assets/icon.ico"
+  }
+}
+
+}
