@@ -1,6 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
-const { login, logout } = require("./backend/auth");
+const { login, logout } = require("./backend/service/login");
 
 
 let win;
@@ -29,3 +29,4 @@ ipcMain.handle("login", async (_, username, password) => {
 ipcMain.handle("logout", async () => {
   return logout((err, result) => (err ? { success: false } : result));
 });
+
