@@ -16,19 +16,23 @@
   "main": "src/main.js",
   "scripts": {
     "start": "npx electron .",
-    "build": "electron-builder"
+    "build": "npx electron-builder --win"
   },
   "dependencies": {
-    "electron": "^35.0.1",
+    "dotenv": "^16.4.7",
     "sqlite3": "^5.1.7"
   },
+  "devDependencies": {
+    "electron": "^35.0.1",
+    "electron-builder": "^25.1.8"
+  },
   "build": {
-  "appId": "electronapps", 
-  "productName": "ElectronApp",
-  "win": {
-    "target": "nsis",
-    "icon": "assets/icon.ico"
+    "appId": "electronapps",
+    "productName": "ElectronApp",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "asar": false
   }
-}
-
 }
